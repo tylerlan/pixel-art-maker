@@ -43,3 +43,19 @@ function changeColor(event) {
   event.target.style.backgroundColor = paintBrush;
 
 }
+
+/* ====================
+        RESET
+==================== */
+
+let resetButton = document.getElementById('reset');
+resetButton.addEventListener('click', resetGrid);
+
+function resetGrid () {
+  for (pixel in pixels) {
+    console.log(pixels[pixel].style.backgroundColor);
+//    pixels[pixel].style.backgroundColor = "none";
+      pixels[pixel].style.backgroundColor = "rgb(255, 255, 255)";
+  }
+
+}
